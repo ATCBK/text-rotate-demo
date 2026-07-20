@@ -5,44 +5,28 @@ import { AnimatePresence, motion, useInView } from 'motion/react'
 
 const exampleImages = [
   {
-    url: 'https://images.unsplash.com/photo-1727341554370-80e0fe9ad082?q=80&w=2276&auto=format&fit=crop',
-    author: 'Branislav Rodman',
-    link: 'https://unsplash.com/photos/a-black-and-white-photo-of-a-woman-brushing-her-teeth-r1SjnJL5tf0',
+    url: '/转场图片/01.png',
+    link: '/转场图片/01.png',
   },
   {
-    url: 'https://images.unsplash.com/photo-1640680608781-2e4199dd1579?q=80&w=3087&auto=format&fit=crop',
-    author: 'Tim Mossholder',
-    link: 'https://unsplash.com/photos/a-painting-of-a-palm-leaf-on-a-multicolored-background-AaNPwrSNOFE',
+    url: '/转场图片/02.png',
+    link: '/转场图片/02.png',
   },
   {
-    url: 'https://images.unsplash.com/photo-1726083085160-feeb4e1e5b00?q=80&w=3024&auto=format&fit=crop',
-    author: 'ANDRII SOLOK',
-    link: 'https://unsplash.com/photos/a-blurry-photo-of-a-crowd-of-people-UgbxzloNGsc',
+    url: '/转场图片/03.png',
+    link: '/转场图片/03.png',
   },
   {
-    url: 'https://images.unsplash.com/photo-1562016600-ece13e8ba570?q=80&w=2838&auto=format&fit=crop',
-    author: 'Wesley Tingey',
-    link: 'https://unsplash.com/photos/rippling-crystal-blue-water-9-OCsKoyQlk',
+    url: '/转场图片/04.png',
+    link: '/转场图片/04.png',
   },
   {
-    url: 'https://images.unsplash.com/photo-1624344965199-ed40391d20f2?q=80&w=2960&auto=format&fit=crop',
-    author: 'Serhii Tyaglovsky',
-    link: 'https://unsplash.com/de/fotos/mann-im-schwarzen-hemd-unter-blauem-himmel-m8RDNiuEXro',
+    url: '/转场图片/05.png',
+    link: '/转场图片/05.png',
   },
   {
-    url: 'https://images.unsplash.com/photo-1689553079282-45df1b35741b?q=80&w=3087&auto=format&fit=crop',
-    author: 'Vladimir Yelizarov',
-    link: 'https://unsplash.com/photos/a-woman-with-a-flower-crown-on-her-head-0S3muIttbsY',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1721968317938-cf8c60fccd1a?q=80&w=2728&auto=format&fit=crop',
-    author: 'Eugene Golovesov',
-    link: 'https://unsplash.com/photos/a-blurry-photo-of-white-flowers-in-a-field-6qbx0lzGPyc',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1677338354108-223e807fb1bd?q=80&w=3087&auto=format&fit=crop',
-    author: 'Mathilde Langevin',
-    link: 'https://unsplash.com/photos/a-table-topped-with-two-wine-glasses-and-plates-Ig0gRAHspV0',
+    url: '/转场图片/06.png',
+    link: '/转场图片/06.png',
   },
 ]
 
@@ -179,7 +163,7 @@ function FeatureCopyPanel({ index }: { index: number }) {
               {feature.number}
             </span>
             <div className="min-w-0 pt-1">
-              <p className="text-base font-medium leading-7 tracking-normal text-muted-foreground sm:text-lg">
+              <p className="text-lg font-semibold leading-8 tracking-normal text-foreground sm:text-xl">
                 {feature.label}
               </p>
               <h1 className="mt-4 max-w-2xl text-lg font-semibold leading-tight tracking-normal text-foreground sm:text-xl">
@@ -207,7 +191,7 @@ function FeatureCopyPanel({ index }: { index: number }) {
 
 function Preview() {
   const [activeIndex, setActiveIndex] = useState(0)
-  const slicedImages = exampleImages.slice(1, learningFeatures.length + 1)
+  const slicedImages = exampleImages
 
   const handleInView = useCallback((index: number, inView: boolean) => {
     if (inView) {
